@@ -5,8 +5,67 @@
     --color-text-button: #FFF;
 
     /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
-    --hide-overlay: 0;
+    --hide-overlay: 1;
 }
 
 
 /* Begynd her... */
+.container
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    height: 100vh;
+    border: 2px solid #333;
+    width: 100%;
+}
+
+.container > div
+{
+    width: 100%;
+}
+
+.container .description header h1
+{
+    color: var(--color-heading);
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.container .description p
+{
+    margin: 20px 0 40px 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.container .description a.btn
+{
+    display: inline-block;
+    color: var(--color-text-button);
+    background-color: var(--color-bg-button);
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: opacity .15s ease-in;
+}
+
+a.btn:hover
+{
+    opacity: .6;
+    transition: opacity .15s ease-in;
+}
+
+.gallery
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery img
+{
+    height: 200px;
+    border-radius: 50px;
+}
