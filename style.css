@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 100, 200, 300, 400, 500, 600, 700, 800, 900');
+
 :root {
-    background: #E3EDFB;
+    --background: #E3EDFB;
 
     --color-icon: #0B3A67;
 
@@ -9,8 +11,70 @@
     --font-heading: 1.75rem;
 
     /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
-    --hide-overlay: 0;
+    --hide-overlay: 1;
 }
 
+body
+{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
 
 /* Begynd her... */
+.card
+{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    height: 200px;
+    width: 500px;
+    border-radius: 10px;
+    gap: 20px;
+    padding: var(--card-padding);
+    background-color: var(--background);
+
+    h2
+    {
+        font-size: var(--font-heading);
+        font-weight: 700;
+        color: #222;
+    }
+
+    h4
+    {
+        margin: 10px 0;
+        color: #a3a3a3;
+        font-size: calc(var(--font-heading) / 1.6);
+        font-weight: 700;
+    }
+
+    .card-content-info-container
+    {
+        text-align: left;
+    }
+
+    img
+    {
+        object-fit: cover;
+        height: var(--image-width);
+        border-radius: 500px;
+        width: var(--image-width);
+    }
+
+    .socials
+    {
+        display: flex;
+        justify-content: space-between;
+
+        i
+        {
+            color: var(--color-icon);
+        }
+    }
+   
+   
+}
+
