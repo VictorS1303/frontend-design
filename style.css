@@ -80,7 +80,7 @@
 /* Custom Styles */
 
 /* 1. Card with no images and headings */
-.card:not(:has(img)):not(:has(h3))
+.card:not(:has(img, h3))
 {
     font-size: 1.25rem;
     line-height: 1.4;
