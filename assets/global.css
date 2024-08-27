@@ -19,5 +19,5 @@
     background: #fff;
     z-index: 100;
     padding: 2rem max(1rem, 50% - 1100px / 2);
-    opacity: calc(1 - var(--hide-overlay, 1));
+    opacity: calc(1 - var(--hide-overlay, ));
 }

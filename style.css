@@ -13,68 +13,106 @@
 .container
 {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 0 40px;
     align-items: center;
-    gap: 40px;
-    padding: 40px;
     height: 100vh;
-    border: 2px solid #333;
-    width: 100%;
 }
 
-.container > div
+.container .description header
 {
-    width: 100%;
-}
-
-.container .description header h1
-{
-    color: var(--color-heading);
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
 }
 
 .container .description p
 {
-    margin: 20px 0 40px 0;
-    font-size: 1.5rem;
-    line-height: 1.6;
+    margin: 40px 0;
 }
 
 .container .description a.btn
 {
-    display: inline-block;
     color: var(--color-text-button);
     background-color: var(--color-bg-button);
-    padding: 10px 20px;
-    border-radius: 100px;
-    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50px;
     transition: opacity .15s ease-in;
 }
 
-a.btn:hover
+.container .description a.btn:hover
 {
-    opacity: .6;
+    opacity: .9;
     transition: opacity .15s ease-in;
 }
 
 .gallery
 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 20px;
 }
 
 .gallery img
 {
-    height: 200px;
-    width: 250px;
-    border-radius: 50px;
-    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
 }
 
-.gallery img:nth-child(2)
+@media screen and (min-width: 768px)
 {
-    grid-column: 2 / span 2;
-    grid-row: 1 / span 2;
+    .container
+    {
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .container > *
+    {
+        flex: 1;
+    }
+
+    .gallery
+    {
+        grid-template-areas:
+            ".        imgOne        ."
+            "imgTwo  imgThree imgFour"
+            "imgFive imgThree imgSix "
+            ".       imgSeven       ."
+    }
+
+    .gallery img:nth-child(1)
+    {
+        grid-area: imgOne;
+    }
+
+    .gallery img:nth-child(2)
+    {
+        grid-area: imgTwo;
+    }
+
+    .gallery img:nth-child(3)
+    {
+        grid-area: imgThree;
+    }
+
+    .gallery img:nth-child(4)
+    {
+        grid-area: imgFour;
+    }
+
+    .gallery img:nth-child(5)
+    {
+        grid-area: imgFive;
+    }
+
+    .gallery img:nth-child(6)
+    {
+        grid-area: imgSix;
+    }
+
+    .gallery img:nth-child(7)
+    {
+        grid-area: imgSeven;
+    }
 }
