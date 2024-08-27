@@ -50,6 +50,7 @@
     }
 }
 
+/* Reset Styles */
 @layer reset {
     * {
         box-sizing: border-box;
@@ -77,3 +78,27 @@
 
 
 /* Custom Styles */
+
+/* 1. Card with no images and headings */
+.card:not(:has(img)):not(:has(h3))
+{
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+/* 2. Headings of cards with no images */
+.card:not(:has(img)) h3
+{
+    font-size: 1.6rem;
+}
+
+/* 3. Cards with images */
+.card:has(img)
+{
+    padding: 0;
+}
+
+.card:has(img) .content
+{
+    padding: 1rem;
+}
