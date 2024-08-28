@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/gill-sans-2');
 @import url('https://fonts.cdnfonts.com/css/abril-fatface');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
 
 article {
     font-family: 'Gill Sans', sans-serif;
@@ -15,7 +16,7 @@ article {
 
 .picture {
     display: grid;
-    padding: .5rem;
+    padding: 0;
 
     >* {
         grid-area: 1 / 1;
@@ -33,15 +34,16 @@ article {
         border-radius: 1rem;
         letter-spacing: 2px;
         line-height: 1;
-        place-self: end;
-        background: #BDC4CE;
+        place-self: start;
+        align-self: end;
+        background: rgba(0, 0, 0, .7);
         color: #fff;
         margin: 1rem;
     }
 
     img {
         border: 1px solid #DADCEB;
-        border-radius: .5rem;
+        border-radius: .5rem .5rem 0 0;
     }
 }
 
@@ -49,6 +51,24 @@ article {
     display: grid;
     gap: 1rem;
     padding: 0 2rem 1rem;
+
+    header
+    {
+        margin: 20px 0;
+
+        & .title
+        {
+            color: #222;
+        }
+
+        & .location
+        {
+            font-size: 15px;
+            margin-top: 5px;
+            color: #aaa;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
 }
 
 .title {
@@ -65,12 +85,17 @@ article {
 }
 
 .description p {
-    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    text-align: left;
 }
 
 .amenities-details {
     display: flex;
     gap: 1rem;
+    border-top: 2px solid lightblue;
+    border-bottom: 2px solid lightblue;
+    padding: 10px 0;
 
     li {
         flex: 1;
@@ -78,8 +103,8 @@ article {
         gap: .75rem;
         place-items: center;
         padding: .25rem;
-        background: #F0F2FF;
-        color: #3C55CC;
+        background: transparent;
+        color: #555;
     }
 }
 
@@ -102,13 +127,16 @@ footer {
         border-radius: 8px;
         font-weight: 500;
         font: inherit;
-        background: #F0F2FF;
-        color: #3C55CC;
+        background: #3C55CC;
+        color: #F0F2FF;
+        cursor: pointer;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
     }
 
     .price {
         font-weight: 600;
-
+        font-size: 1.3em;
         span {
             color: #908F9F;
             font-size: 0.75em;
